@@ -1,3 +1,4 @@
+'use strict';
 //меню-бургер
 const headerBurger = document.querySelector('.header__burger');
 const headerMenu = document.querySelector('.header__menu');
@@ -10,7 +11,7 @@ if (headerBurger) {
 }
 
 // плавная прокрутка при клике
-const menuLinks = document.querySelectorAll('.header__link[data-goto]');
+const menuLinks = document.querySelectorAll('a[data-goto]');
 if (menuLinks.length > 0) {
   menuLinks.forEach(menuLink => {
     menuLink.addEventListener('click', onMenuLinkClick);
@@ -19,7 +20,7 @@ if (menuLinks.length > 0) {
     const menuLink = e.target;
     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+      const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
 
       if (headerBurger.classList.contains('_active')) {
         document.body.classList.remove('_lock');
