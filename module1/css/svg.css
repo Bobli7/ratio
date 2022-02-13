@@ -1,0 +1,50 @@
+.icon {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  filter: none;
+  transition: all .3s ease;
+}  
+.icon:hover {
+  transform: scaleX(0.5);
+  transition: all .2s ease;
+  filter: drop-shadow(-4px 0px 1px #eb5247);
+}
+.logo__favicon {
+  width: 49px;
+  height: 35px;
+  /* CSS-переменные, в коде SVG-иконки */
+  --rect-left: #9C69E2;
+  --rect-right: #F063B8;
+}
+.logo__favicon:hover {
+  --rect-left: #00c0fa;
+  --rect-right: #fa003f;
+} 
+.icons {
+  width: 180px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-fb {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  left: 20px;
+  top: -70px;
+}
+.icon-tw {
+  width: 18px;
+  height: 14px;
+  position: absolute;
+  left: 17px;
+  top: -70px;
+}
+.icon-ig {
+  width: 16px;
+  height: 15px;
+  position: absolute;
+  left: 17px;
+  top: -70px;
+}
